@@ -33,7 +33,7 @@ export const DestinationCard = ({ index, navigation, item }) => {
     >
       
       <Image 
-            source={require("../../assets/images/potala.png")} 
+            source={require("../../assets/house_2.jpg")} 
             style={styles.avatar} 
             resizeMode="cover" 
           />

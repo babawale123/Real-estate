@@ -32,7 +32,7 @@ export default function HomeScreen() {
           <Text style={styles.avatarTitle}>GreyMond Shelters</Text>
           <TouchableOpacity>
             <Image
-              source={require("../../assets/images/avatar.png")}
+              source={require("../../assets/avatar.png")}
               style={styles.avatarImage}
             />
           </TouchableOpacity>

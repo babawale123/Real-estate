@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
       {/* Background Image */}
       <View style={styles.imageView}>
         <Image
-          source={require("../../assets/images/west.png")}
+          source={require("../../assets/home.jpg")}
           style={styles.image}
         />
       </View>
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   MainTitle: {
     fontSize: wp(10),
-    color: "white",
+    color: "skyblue",
     fontWeight: "bold",
     lineHeight: wp(12),
   },

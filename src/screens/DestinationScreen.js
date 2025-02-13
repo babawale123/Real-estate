@@ -29,7 +29,7 @@ export default function DestinationScreen(props) {
   return (
     <View style={styles.container}>
      <Image 
-      source={require("../../assets/images/potala.png")} 
+      source={require("../../assets/house_2.jpg")} 
       style={styles.Image} 
       resizeMode="cover" 
     />
@@ -108,7 +108,7 @@ export default function DestinationScreen(props) {
 
       </View>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Pay')} style={styles.durationView}>
+        <TouchableOpacity onPress={()=>navigation.navigate('Plan')} style={styles.durationView}>
         <FontAwesome5 name="money-bill-wave" size={32} color="black" />
                     <View style={styles.titleDetails}>
               <Text style={styles.detailsParagraphpay}>Click to Pay</Text>

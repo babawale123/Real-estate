@@ -9,14 +9,14 @@ const listings = [
     title: "Brookvale Villa",
     location: "Jakarta, Indonesia",
     price: "₦ 9,000,000",
-    image: require("../../assets/images/potala.png"),
+    image: require("../../assets/house_1.jpg"),
   },
   {
     id: "2",
     title: "The Overdale Apartment",
     location: "Jakarta, Indonesia",
     price: "₦ 9,000,000",
-    image: require("../../assets/images/potala.png"),
+    image: require("../../assets/house_1.jpg"),
   },
 ];
 
@@ -36,7 +36,7 @@ export default function ProfileScreen() {
 
       {/* Profile Info */}
       <View style={styles.profileSection}>
-        <Image source={require("../../assets/images/avatar.png")} style={styles.profileImage} />
+        <Image source={require("../../assets/avatar.png")} style={styles.profileImage} />
         <Text style={styles.profileName}>Amanda</Text>
         <Text style={styles.profileEmail}>amanda.trust@email.com</Text>
       </View>
