@@ -21,7 +21,7 @@ const LandingScreen = () => {
           <Text style={styles.text}  onPress={()=>navigation.navigate('Home')}>Housing Properties</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>navigation.navigate('Login')} style={styles.card}>
+        <TouchableOpacity onPress={()=>navigation.navigate('AffiliateLanding')} style={styles.card}>
           <MaterialCommunityIcons name="map-marker-path" size={32} color="black" />
           <Text style={styles.text} >Affiliate Marketer</Text>
         </TouchableOpacity>
