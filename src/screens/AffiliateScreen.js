@@ -33,17 +33,19 @@ export default function AffiliateScreen() {
             gap: 10,
           }}
         >
-          <Text style={styles.MainTitle}>Your Dream Home, Just a Tap Away!</Text>
+          <Text style={styles.MainTitle}></Text>
           <Text style={styles.welcomeDescription}>
-          Find, Love, Move – Seamlessly. Because home isn’t just a place, it’s a feeling. Start your journey with GreyMond Shelters 
+          Your network is your net worth—build relationships, not just links.
+          Content is king, but conversion is the kingdom.
+          Become an Affiliate marketer at GreyMond Shelters Today.
           </Text>
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate("Landing")}
+          onPress={() => navigation.navigate("Login")}
           style={styles.exploreButton}
         >
-          <Text style={styles.exploreButtonText}>Explore</Text>
+          <Text style={styles.exploreButtonText}>Click to Sign up</Text>
         </TouchableOpacity>
       </View>
     </View>

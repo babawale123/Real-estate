@@ -3,15 +3,15 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, Animated } 
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
 
-
-const LoginScreen = ({ navigation }) => {
+const RegisterScreen = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const fadeAnim = useState(new Animated.Value(0))[0];
 
-  const nav = useNavigation();
-  
+  const navigation = useNavigation();
 
   React.useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -23,10 +23,25 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Animated.Image source={{ uri: 'https://your-image-url.com/login-header.png' }} style={[styles.headerImage, { opacity: fadeAnim, transform: [{ scale: fadeAnim }] }]} />
+      <Animated.Image 
+        source={{ uri: 'https://your-image-url.com/register-header.png' }} 
+        style={[styles.headerImage, { opacity: fadeAnim, transform: [{ scale: fadeAnim }] }]} 
+      />
       
-      <Text style={styles.title}>Welcome Back <Text style={styles.boldText}>Sign In</Text></Text>
-      
+      <Text style={styles.title}>Let’s <Text style={styles.boldText}>Sign Up</Text></Text>
+
+      {/* Name Input */}
+      <View style={styles.inputContainer}>
+        <FontAwesome name="user" size={20} color="#888" style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          placeholder="Full Name"
+          value={name}
+          onChangeText={setName}
+        />
+      </View>
+
+      {/* Email Input */}
       <View style={styles.inputContainer}>
         <FontAwesome name="envelope" size={20} color="#888" style={styles.icon} />
         <TextInput
@@ -37,7 +52,8 @@ const LoginScreen = ({ navigation }) => {
           onChangeText={setEmail}
         />
       </View>
-      
+
+      {/* Password Input */}
       <View style={styles.inputContainer}>
         <FontAwesome name="lock" size={20} color="#888" style={styles.icon} />
         <TextInput
@@ -48,22 +64,30 @@ const LoginScreen = ({ navigation }) => {
           onChangeText={setPassword}
         />
         <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-          <Text style={styles.showText}>{showPassword ? 'Hide' : 'Show'} password</Text>
+          <Text style={styles.showText}>{showPassword ? 'Hide' : 'Show'}</Text>
         </TouchableOpacity>
       </View>
-      
-      <TouchableOpacity onPress={() => alert('Forgot Password?')}>
-        <Text style={styles.forgotText}>Forgot password?</Text>
+
+      {/* Confirm Password Input */}
+      <View style={styles.inputContainer}>
+        <FontAwesome name="lock" size={20} color="#888" style={styles.icon} />
+        <TextInput
+          style={styles.input}
+          placeholder="Confirm Password"
+          secureTextEntry={!showPassword}
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
+        />
+      </View>
+
+      {/* Register Button */}
+      <TouchableOpacity style={styles.registerButton} onPress={()=>navigation.navigate('Login')}>
+        <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
 
-      
-      
-      <TouchableOpacity style={styles.loginButton} onPress={() => nav.navigate('affiliate')}>
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
-      
       <Text style={styles.orText}>OR</Text>
-      
+
+      {/* Social Media Signup */}
       <View style={styles.socialContainer}>
         <TouchableOpacity style={styles.socialButton}>
           <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png' }} style={styles.socialIcon} />
@@ -72,13 +96,14 @@ const LoginScreen = ({ navigation }) => {
           <Image source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png' }} style={styles.socialIcon} />
         </TouchableOpacity>
       </View>
-      
-      <Text style={styles.registerText}>Don't have an account?  
-      
-        <Text onPress={()=>nav.navigate('Signup')} style={styles.loginBold}> Register</Text>
-     
-       
+
+      {/* Already Have an Account */}
+      <Text style={styles.loginText}>
+        Already have an account?{' '}
+        <Text style={styles.loginBold} onPress={() => navigation.navigate('Login')}>
+          Login
         </Text>
+      </Text>
     </View>
   );
 };
@@ -123,12 +148,7 @@ const styles = StyleSheet.create({
     color: '#007bff',
     fontSize: 14,
   },
-  forgotText: {
-    alignSelf: 'flex-end',
-    color: '#007bff',
-    marginBottom: 20,
-  },
-  loginButton: {
+  registerButton: {
     backgroundColor: '#7BC043',
     width: '100%',
     padding: 15,
@@ -164,13 +184,9 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  registerText: {
+  loginText: {
     marginTop: 20,
     color: '#333',
-  },
-  registerBold: {
-    fontWeight: 'bold',
-    color: '#007bff',
   },
   loginBold: {
     fontWeight: 'bold',
@@ -178,4 +194,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default RegisterScreen;
