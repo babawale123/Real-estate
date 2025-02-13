@@ -13,12 +13,19 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Categories() {
+    const nav = useNavigation();
+  
   return (
     <View>
       <View style={styles.container}>
         <Text style={styles.titleMain}>Category</Text>
+
+        <TouchableOpacity onPress={() => nav.navigate('affiliate')}>
+                <Text style={styles.subTitle}>Affiliate Marketer</Text>
+              </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.subTitle}>View all</Text>
         </TouchableOpacity>

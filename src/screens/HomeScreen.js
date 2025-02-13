@@ -54,6 +54,7 @@ export default function HomeScreen() {
         <View style={styles.categories}>
           <Categories />
         </View>
+        
 
         {/* Sort Categories */}
         <View style={styles.sortCategories}>
