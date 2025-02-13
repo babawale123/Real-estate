@@ -29,7 +29,7 @@ export default function ProfileScreen() {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={()=>nav.navigate('Home')}><Ionicons name="arrow-back" size={24} color="black" /></TouchableOpacity>
+        <TouchableOpacity onPress={()=>nav.navigate('Landing')}><Ionicons name="arrow-back" size={24} color="black" /></TouchableOpacity>
         <Text style={styles.headerText}>Profile</Text>
         <Ionicons name="share-outline" size={24} color="black" />
       </View>

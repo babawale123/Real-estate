@@ -9,6 +9,7 @@ import LoginScreen from "../screens/Login";
 import PaymentScreen from "../screens/Payment";
 import ProfileScreen from "../screens/ProfileScreen";
 import PaymentPlanScreen from "../screens/PaymentPlan";
+import LandingScreen from "../screens/LandingScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ export default function AppNavigation() {
         <Stack.Screen name="Pay" component={PaymentScreen} />
         <Stack.Screen name="affiliate" component={ProfileScreen} />
         <Stack.Screen name="Plan" component={PaymentPlanScreen} />
+        <Stack.Screen name="Landing" component={LandingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

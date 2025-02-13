@@ -23,9 +23,9 @@ export default function Categories() {
       <View style={styles.container}>
         <Text style={styles.titleMain}>Category</Text>
 
-        <TouchableOpacity onPress={() => nav.navigate('affiliate')}>
+        {/* <TouchableOpacity onPress={() => nav.navigate('affiliate')}>
                 <Text style={styles.subTitle}>Affiliate Marketer</Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
         <TouchableOpacity>
           <Text style={styles.subTitle}>View all</Text>
         </TouchableOpacity>

@@ -40,7 +40,7 @@ export default function WelcomeScreen() {
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Landing")}
           style={styles.exploreButton}
         >
           <Text style={styles.exploreButtonText}>Explore</Text>
