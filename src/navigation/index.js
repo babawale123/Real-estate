@@ -12,6 +12,7 @@ import PaymentPlanScreen from "../screens/PaymentPlan";
 import LandingScreen from "../screens/LandingScreen";
 import AffiliateScreen from "../screens/AffiliateScreen";
 import SignupScreen from "../screens/SignupScreen";
+import AffiLanding from "../screens/AffiLanding";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,7 @@ export default function AppNavigation() {
         <Stack.Screen name="Landing" component={LandingScreen} />
         <Stack.Screen name="AffiliateLanding" component={AffiliateScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="AffiLand" component={AffiLanding} />
       </Stack.Navigator>
     </NavigationContainer>
   );

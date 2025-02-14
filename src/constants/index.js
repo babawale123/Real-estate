@@ -75,7 +75,7 @@ export const destinationData = [
     shortDescription:
       "The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China.",
     longDescription:
-      "The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin Shi Huang, the first Emperor of China. It is a form of funerary art buried with the emperor in 210–209 BCE with the purpose of protecting the emperor in his afterlife.",
+      "The Terracotta Army is a collection of terracotta sculptures depicting the armies of Qin ",
       // image: require("../../assets/images/yellow.png"),
   },
   {
@@ -88,7 +88,7 @@ export const destinationData = [
     shortDescription:
       "West Lake is a freshwater lake located in the historic area of Hangzhou, China.",
     longDescription:
-      "West Lake is a freshwater lake located in the historic area of Hangzhou, the capital of Zhejiang province in eastern China. The lake is famous for its scenic beauty, surrounded by mountains, temples, and gardens. It has influenced poets and painters throughout Chinese history for its natural beauty and historic relics.",
+      "West Lake is a freshwater lake located in the historic area of Hangzhou, the capital of ",
     // image: require("../../assets/images/west.png"),
   },
   {
@@ -101,7 +101,7 @@ export const destinationData = [
     shortDescription:
       "Zhangjiajie National Forest Park is known for its thousands of sandstone pillars and peaks.",
     longDescription:
-      "Zhangjiajie National Forest Park is a unique national forest park located in Zhangjiajie City in northern Hunan Province, China. It is known for its thousands of sandstone pillars and peaks, which inspired the floating mountains in the movie 'Avatar.' The park is part of the Wulingyuan Scenic Area, a UNESCO World Heritage Site.",
+      "Zhangjiajie National Forest Park is a unique national forest park located in Zhangjiajie City in northern Hunan Province, China.",
     // image: require("../../assets/images/national.png"),
   },
   {
@@ -114,7 +114,7 @@ export const destinationData = [
     shortDescription:
       "The Potala Palace is a historic Tibetan palace located in Lhasa, Tibet Autonomous Region, China.",
     longDescription:
-      "The Potala Palace is a historic Tibetan palace located in Lhasa, Tibet Autonomous Region, China. It was the winter residence of the Dalai Lamas and is now a museum and UNESCO World Heritage Site. The palace is known for its stunning architecture and cultural significance.",
+      "The Potala Palace is a historic Tibetan palace located in Lhasa, Tibet Autonomous Region, China.",
     // image: require("../../assets/images/potala.png"),
   },
   {

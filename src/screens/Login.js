@@ -58,7 +58,7 @@ const LoginScreen = ({ navigation }) => {
 
       
       
-      <TouchableOpacity style={styles.loginButton} onPress={() => nav.navigate('affiliate')}>
+      <TouchableOpacity style={styles.loginButton} onPress={() => nav.navigate('AffiLand')}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       
