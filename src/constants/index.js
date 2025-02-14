@@ -34,7 +34,7 @@ export const destinationData = [
     shortDescription:
       "The Great Wall of China is one of the most iconic landmarks in the world.",
     longDescription:
-      "Our Greymond Sapphire Estate series is packaged carefully and designed to suit all classes. it is located at Karsana North, Abuja. The Estate is 20 minutes drive to the Central Business District, Abuja.",
+      "Our Greymond Sapphire Estate series is packaged carefully and designed to suit all classes. it is located at Karsana North, Abuja.",
     // image: require("../../assets/images/great.png"),
   },
   {
@@ -62,7 +62,7 @@ export const destinationData = [
     shortDescription:
       "Yellow Mountain is a famous mountain range in Anhui Province, China.",
     longDescription:
-      "Huangshan, also known as Yellow Mountain, is a mountain range in southern Anhui province in eastern China. It is a UNESCO World Heritage Site and one of China's major tourist destinations. The area is well known for its scenic beauty, which includes unusually shaped granite peaks, ancient pine trees, hot springs, and winter snow.",
+      "Huangshan, also known as Yellow Mountain, is a mountain range in southern Anhui province in eastern China.",
     // image: require("../../assets/images/yellow.png"),
   },
   {
