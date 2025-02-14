@@ -31,9 +31,11 @@ const LandingScreen = () => {
           <Text style={styles.text} >Landing Property</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.card}>
+        
+
+        <TouchableOpacity onPress={()=>navigation.navigate('Dashboard')} style={styles.card}>
           <MaterialCommunityIcons name="cog" size={32} color="black" />
-          <Text style={styles.text}>Settings</Text>
+          <Text style={styles.text}>Dashboard</Text>
         </TouchableOpacity>
       </View>
     </View>

@@ -20,7 +20,7 @@ const AffiLanding = () => {
           <Text style={styles.text}>Uploaded Properties</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity onPress={() => navigation.navigate("Transactions")} style={styles.card}>
           <MaterialIcons name="apartment" size={40} color="#2196F3" />
           <Text style={styles.text}>Transactions</Text>
         </TouchableOpacity>

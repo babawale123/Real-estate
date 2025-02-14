@@ -36,7 +36,7 @@ export default function PaymentPlanScreen() {
           )}
         />
 
-        <TouchableOpacity onPress={()=>nav.navigate("Pay")} style={styles.button}>
+        <TouchableOpacity onPress={()=>nav.navigate("Transummary")} style={styles.button}>
           <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
       </View>

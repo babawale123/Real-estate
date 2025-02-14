@@ -52,6 +52,8 @@ const PaymentScreen = () => {
         Proceed to Payment
       </Button>
 
+      
+
       {/* Other Payment Methods */}
       <View>
         {["Net Banking", "Pay later with mandate"].map(
