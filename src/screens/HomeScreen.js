@@ -29,7 +29,14 @@ export default function HomeScreen() {
       >
         {/* Avatar */}
         <View style={styles.avatarMain}>
-          <Text style={styles.avatarTitle}>GreyMond Shelters</Text>
+
+        <TouchableOpacity>
+            <Image
+              source={require("../../assets/logo.jpeg")}
+              style={styles.avatarImageLogo}
+            />
+          </TouchableOpacity>
+
           <TouchableOpacity>
             <Image
               source={require("../../assets/avatar.png")}
@@ -90,6 +97,11 @@ const styles = StyleSheet.create({
   avatarImage: {
     height: wp(12),
     width: wp(12),
+  },
+
+  avatarImageLogo:{
+    height: wp(20),
+    width: wp(35),
   },
   searchBar: {
     marginHorizontal: 20,
