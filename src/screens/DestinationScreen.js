@@ -12,111 +12,77 @@ import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-
+import { AntDesign } from "@expo/vector-icons";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { AntDesign } from "@expo/vector-icons";
 
 export default function DestinationScreen(props) {
   const item = props.route.params;
-  //   console.log(item);
   const navigation = useNavigation();
-
   const [isFavourite, toggleFavourite] = useState(false);
 
   return (
     <View style={styles.container}>
-     <Image 
-      source={require("../../assets/house_2.jpg")} 
-      style={styles.Image} 
-      resizeMode="cover" 
-    />
+      <Image 
+        source={require("../../assets/house_2.jpg")} 
+        style={styles.Image} 
+        resizeMode="cover" 
+      />
 
       <StatusBar style="light" />
 
-      {/* Back View */}
-      <SafeAreaView
-        style={styles.navigationIcons}
-        contentContainerStyle={{
-          marginTop: 40,
-        }}
-      >
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          style={styles.backView}
-        >
+      {/* Back and Favourite Buttons */}
+      <SafeAreaView style={styles.navigationIcons}>
+        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backView}>
           <Ionicons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
 
-        {/* Favourite View */}
-        <TouchableOpacity
-          onPress={() => toggleFavourite(!isFavourite)}
-          style={styles.favouriteView}
-        >
-          <View>
-            <AntDesign
-              name="heart"
-              size={24}
-              color={isFavourite ? "red" : "white"}
-            />
-          </View>
+        <TouchableOpacity onPress={() => toggleFavourite(!isFavourite)} style={styles.favouriteView}>
+          <AntDesign name="heart" size={24} color={isFavourite ? "red" : "white"} />
         </TouchableOpacity>
       </SafeAreaView>
 
-      {/* Title */}
-      <ScrollView
-        style={styles.descriptionView}
-        contentContainerStyle={{
-          gap: 20,
-        }}
-      >
+      {/* Content */}
+      <ScrollView style={styles.descriptionView} contentContainerStyle={{ gap: 20 }}>
         <View style={styles.titleView}>
           <Text style={styles.title}>{item.title}</Text>
         </View>
 
-        <Text style={styles.description}>{item.longDescription} </Text>
+        
 
-        <View style={styles.detailsView}>
-          {/* Duration View */}
-          <View style={styles.durationView}>
-            <AntDesign name="clockcircle" size={24} color="orange" />
-            <View style={styles.titleDetails}>
-              <Text style={styles.detailsHeading}>₦1,200,000 per year</Text>
-              <Text style={styles.detailsParagraph}>Price</Text>
-            </View>
+        {/* Description */}
+        <Text style={styles.description}>{item.longDescription}</Text>
+
+        {/* Table Layout for Price, Square Meter, and Weather */}
+        <View style={styles.tableContainer}>
+          <View style={styles.tableRow}>
+            <Text style={styles.tableHeader}>Square M</Text>
+            <Text style={styles.tableHeader}>Amount</Text>
+          </View>
+          <View style={styles.tableRow}>
+            <Text style={styles.tableCell}>500</Text>
+            <Text style={styles.tableCell}>₦1,200,000</Text>
           </View>
 
-          {/* Distance View */}
-          <View style={styles.durationView}>
-            <AntDesign name="clockcircle" size={24} color="orange" />
-            <View style={styles.titleDetails}>
-              <Text style={styles.detailsHeading}>500 M</Text>
-              <Text style={styles.detailsParagraph}>Sqr meter</Text>
-            </View>
+          <View style={styles.tableRow}>
+            <Text style={styles.tableCell}>200</Text>
+            <Text style={styles.tableCell}>₦1,00,000</Text>
           </View>
-
-          {/* Weather View */}
-          <View style={styles.durationView}>
-            <AntDesign name="clockcircle" size={24} color="orange" />
-            <View style={styles.titleDetails}>
-              <Text style={styles.detailsHeading}>25°C</Text>
-              <Text style={styles.detailsParagraph}>Weather</Text>
-            </View>
+          <View style={styles.tableRow}>
+            <Text style={styles.tableCell}>300</Text>
+            <Text style={styles.tableCell}>₦1,500,000</Text>
           </View>
+          
+        </View>
 
-      </View>
-
-        <TouchableOpacity onPress={()=>navigation.navigate('Plan')} style={styles.durationView}>
-        <FontAwesome5 name="money-bill-wave" size={32} color="black" />
-                    <View style={styles.titleDetails}>
-              <Text style={styles.detailsParagraphpay}>Click to Pay</Text>
-            </View>
-          </TouchableOpacity>
+        {/* Payment Button */}
+        <TouchableOpacity onPress={() => navigation.navigate('Plan')} style={styles.paymentButton}>
+          <FontAwesome5 name="money-bill-wave" size={32} color="black" />
+          <Text style={styles.paymentText}>Click to Pay</Text>
+        </TouchableOpacity>
       </ScrollView>
-      
-      
     </View>
   );
 }
@@ -174,33 +140,44 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     marginBottom: 8,
   },
-  detailsView: {
+  /* Table Styles */
+  tableContainer: {
+    borderWidth: 1,
+    borderColor: "#ddd",
+    borderRadius: 10,
+    overflow: "hidden",
+    marginBottom: 10,
+  },
+  tableRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginHorizontal: 4,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
   },
-  durationView: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  titleDetails: {
-    padingTop: 4,
-    alignItems: "center",
-    gap: 4,
-  },
-  detailsHeading: {
+  tableHeader: {
     fontSize: wp(4.5),
     fontWeight: "bold",
+    color: "black",
   },
-  detailsParagraph: {
-    letterSpacing: 0.5,
-    color: "#A0A0A0",
+  tableCell: {
+    fontSize: wp(4),
+    color: "#555",
   },
-  detailsParagraphpay: {
-    letterSpacing: 0.5,
+  /* Payment Button */
+  paymentButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+    padding: 10,
+    borderRadius: 10,
+    justifyContent: "center",
+  },
+  paymentText: {
+    fontSize: wp(4),
     color: "blue",
-  },
-  activeRed: {
-    color: "red",
+    marginLeft: 10,
   },
 });
+

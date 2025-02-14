@@ -34,7 +34,7 @@ export const destinationData = [
     shortDescription:
       "The Great Wall of China is one of the most iconic landmarks in the world.",
     longDescription:
-      "The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, wood, and other materials, generally built along an east-to-west line across the historical northern borders of China to protect the Chinese states and empires against the raids and invasions of nomadic groups.",
+      "Our Greymond Sapphire Estate series is packaged carefully and designed to suit all classes. it is located at Karsana North, Abuja. The Estate is 20 minutes drive to the Central Business District, Abuja.",
     // image: require("../../assets/images/great.png"),
   },
   {
@@ -45,10 +45,11 @@ export const destinationData = [
     weather: "25°C",
     price: "₦1,200,000 per year",
     shortDescription:
-      "The Forbidden City is a historic palace complex in Beijing, China.",
+      "Greymond Emerald Estate Apo Wassa Located opposite Gilmor Constructions Wassa",
     longDescription:
-      "The Forbidden City, also known as the Palace Museum, is a palace complex in Beijing, China. The Forbidden City served as the imperial palace from the Ming Dynasty to the end of the Qing Dynasty. It is a UNESCO World Heritage Site and is widely recognized as one of the most important cultural and architectural monuments in the world.",
+      "Greymond Emerald Estate Apo Wassa Located opposite Gilmor Constructions Wassa",
       // image: require("../../assets/images/yellow.png"),
+      
     },
 
   {
