@@ -26,7 +26,7 @@ export const categoriesData = [
 export const destinationData = [
   {
     id: 1,
-    title: "Two Bedroom Duplex",
+    title: "sapphire",
     duration: "10 Days",
     meter: "500 M",
     weather: "25°C",
@@ -39,7 +39,7 @@ export const destinationData = [
   },
   {
     id: 2,
-    title: "Forbidden City",
+    title: "Emareld",
     duration: "7 Days",
     meter: "500 M",
     weather: "25°C",
@@ -53,7 +53,7 @@ export const destinationData = [
 
   {
     id: 3,
-    title: "Yellow Mountain (Huangshan)",
+    title: "Garnet",
     duration: "5 Days",
     meter: "500 M",
     weather: "25°C",
@@ -66,7 +66,7 @@ export const destinationData = [
   },
   {
     id: 4,
-    title: "Terracotta Army",
+    title: "Paridot",
     duration: "3 Days",
     meter: "500 M",
     weather: "25°C",
@@ -79,7 +79,7 @@ export const destinationData = [
   },
   {
     id: 5,
-    title: "West Lake (Hangzhou)",
+    title: "West Lake",
     duration: "4 Days",
     meter: "500 M",
     weather: "25°C",
@@ -92,7 +92,7 @@ export const destinationData = [
   },
   {
     id: 6,
-    title: "Zhangjiajie National Forest Park",
+    title: "Forest Park",
     duration: "6 Days",
     meter: "500 M",
     weather: "25°C",

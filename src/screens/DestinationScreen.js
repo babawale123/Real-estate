@@ -73,10 +73,10 @@ export default function DestinationScreen(props) {
         }}
       >
         <View style={styles.titleView}>
-          <Text style={styles.title}>Two Bedroom Duplex</Text>
+          <Text style={styles.title}>{item.title}</Text>
         </View>
 
-        <Text style={styles.description}>The Great Wall of China is a series of fortifications made of stone, brick, tamped earth, wood, and other materials, generally built along an east-to-west line across the historical northern borders of China to protect the Chinese states and empires against the raids and invasions of nomadic groups.</Text>
+        <Text style={styles.description}>{item.longDescription} </Text>
 
         <View style={styles.detailsView}>
           {/* Duration View */}
