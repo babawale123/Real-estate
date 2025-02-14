@@ -12,12 +12,17 @@ const AffiLanding = () => {
       <View style={styles.gridContainer}>
         <TouchableOpacity style={styles.card}>
           <FontAwesome5 name="wallet" size={36} color="#4CAF50" />
-          <Text style={styles.text}>Total Amount</Text>
+          <Text style={styles.text}>withdrawals</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.card}>
           <MaterialIcons name="apartment" size={40} color="#2196F3" />
           <Text style={styles.text}>Uploaded Properties</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.card}>
+          <MaterialIcons name="apartment" size={40} color="#2196F3" />
+          <Text style={styles.text}>Transactions</Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate("affiliate")} style={styles.card}>
